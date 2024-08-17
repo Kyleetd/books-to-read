@@ -6,17 +6,17 @@
 
 - Download the repository locally.
 - Click on the settings button on the top-right corner.
-- Click "Resrouces".
+- Click "Resources".
 - Click "File sharing".
 - Click the "+" button and add the directory to the api/src folder.
 
-### 2. Build the API docker image:
+### 2. Build the API Docker image:
 
 ```bash
 docker build -t books-to-read-api .
 ```
 
-### 3. Run the API image:
+### 3. Run the API Docker image:
 
 #### Mac Example:
 
@@ -32,7 +32,7 @@ docker run -v D:\Users\Heather\Documents\Kylee\books-to-read\api\src:/src -p 800
 
 #### What the API Docker container executes:
 
-- Activates Poetry environment in api/src folder
+- Activates Poetry environment in the api/src folder
 
   ```bash
   poetry shell

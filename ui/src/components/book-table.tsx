@@ -46,7 +46,16 @@ function EditToolbar(props: EditToolbarProps) {
   return (
     <GridToolbarContainer>
       <Button
-        color="primary"
+        sx={{
+          color: "#757de8", // Default text color
+          backgroundColor: "transparent", // Default background color
+          "&:hover": {
+            backgroundColor: "#b3b7e3", // Lighter/duller background color on hover
+            color: "#757de8", // Text color on hover
+          },
+          transition: "background-color 0.3s ease",
+          marginBottom: "4px",
+        }}
         startIcon={<AddIcon />}
         onClick={handleNewBookClick}
       >
@@ -392,6 +401,15 @@ export const BookTable: FC = () => {
         }}
         slotProps={{
           toolbar: { setRows, setRowModesModel },
+        }}
+        sx={{
+          "& .MuiDataGrid-columnHeaders": {
+            backgroundColor: "#757de8",
+            color: "#ffffff",
+          },
+          "& .MuiDataGrid-row:hover": {
+            backgroundColor: "#eeeeee",
+          },
         }}
       />
     </Box>

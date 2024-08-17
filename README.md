@@ -13,6 +13,8 @@ chmod +x entrypoint.sh
 ./entrypoint.sh
 ```
 
+This will build and run the API and UI Docker images. **Note that if you are using Windows you must use Git Bash or another Unix-like terminal to execute `chmod`**.
+
 # Picture Example of Front End
 
 ![Example Image](docs/TableExample.png)
