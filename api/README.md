@@ -32,19 +32,19 @@ docker run -v D:\Users\Heather\Documents\Kylee\books-to-read\api\src:/src -p 800
 
 #### What the API Docker container executes:
 
-- Activates Poetry environment in the api/src folder
+- Installs all the dependencies listed in the project's pyproject.toml, including uvicorn. (For manual setup outside of Docker, you would need to run `poetry install` and potentially `poetry add uvicorn` if not already included.)
+
+  ```bash
+  poetry install
+  ```
+
+- (Optional for manual setup) Activates the Poetry environment. This step is not needed when running the container, as the Dockerfile already sets up the environment, but you would need to do this manually if not using Docker.
 
   ```bash
   poetry shell
   ```
 
-- Adds uvicorn to Poetry environment
-
-  ```bash
-  poetry add uvicorn
-  ```
-
-- Starts FastAPI
+- Starts the FastAPI application
 
   ```bash
   uvicorn src.main:app

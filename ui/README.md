@@ -17,5 +17,9 @@ docker run -p 3000:3000 books-to-read-ui
 #### What the UI Docker container executes:
 
 ```bash
+npm install
+```
+
+```bash
 npm run dev
 ```
