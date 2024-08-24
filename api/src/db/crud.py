@@ -7,10 +7,8 @@ from . import models, schemas
 def get_book(db: Session, id: int):
     return db.query(models.Books).filter(models.Books.id == id).first()
 
-
 def get_books(db: Session):
     return db.query(models.Books).all()
-
 
 def create_book(db: Session, book: schemas.BookCreate):
     db_book = models.Books(
